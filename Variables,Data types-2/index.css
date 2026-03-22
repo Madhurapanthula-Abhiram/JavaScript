@@ -1,0 +1,14 @@
+body{
+    background-color:black;
+    color: #F5E7C6;
+    font-size: larger;
+}
+h1{
+    text-align: center;
+}
+p{
+    font-size: larger;
+}
+h1,h2,p{
+    color: #FF6D1F;
+}

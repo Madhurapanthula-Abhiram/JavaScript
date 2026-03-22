@@ -1,0 +1,17 @@
+body{
+    background-color: #1b0525;
+    color: #EBD3F8;
+    font-size: 20px;
+}
+h1{
+    font-weight: bold;
+    text-align: center;
+    height: auto;
+    width: auto;
+    color: #EABE6C;
+}
+p{
+    font-weight: bold;
+    color: #EABE6C;
+    font-size: 25px;
+}

@@ -1,0 +1,26 @@
+body{
+    background-color:#3E0703;
+    color: #FFE797;
+    font-size: 25px;
+}
+h1{
+    text-align: center;
+    color: #FFE797;
+}
+h2,h3{
+    color: #FFE797;
+}
+p{
+    color: #F2E8C6;
+}
+.section{
+    margin: 10px 10px 80px 10px;
+    border:2px solid #FFE797;
+    border-radius: 7px;
+}
+li{
+    color: #ffa200;
+}
+h2,h3,p,li{
+    padding-left: 20px;
+}

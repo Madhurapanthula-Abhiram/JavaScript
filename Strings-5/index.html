@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Strings ,String Methods and Escape Characters</h1>
+    <div >
+    <h2>Strings basics</h2>
+    <p>A string is a sequence of characters enclosed in:</p>
+    <ul>
+        <li>"double quotes"</li>
+        <li>'single quotes'</li>
+        <li>`template literals` (backticks)</li>
+    </ul>
+    <p>String Characteristics</p>
+    <ul>
+        <li>Strings are immutable</li>
+        <li>
+        let s = "Hello";
+        s[0] = "Y"; // ❌ No effect
+        s = "Yellow"; // ✔ Only reassigning works
+        </li>
+    </ul>
+    </div>
+    <div>
+        <h2>String Methods</h2>
+        <ol>
+            <pre style="line-height: 0.6 ;">
+            <li>Length              ->      Str.length()</li>
+            <li>toUpperCase()       ->      str.toUpperCase()</li>
+            <li>toLowerCase()       ->      str.toLowerCase()</li>
+            <li>concat()            ->      str1.concat(str2)</li>
+            <li>replace()           ->      str.replace('old','new')</li>
+            <li>replaceAll()        ->      str.replaceAll('old','new')</li>
+            <li>trim()              ->      str.trim()</li>
+            <li>trimStart()         ->      str.trimStart()</li>
+            <li>trimEnd()           ->      str.trimEnd()</li>
+            <li>charAt()            ->      str.charAt(index)</li>
+            <li>charCodeAt()        ->      str.charCodeAt(index)</li>
+            <li>at()                ->      str.at(index)</li>
+            <li>startsWith()        ->      str.startsWith(value)</li>
+            <li>endsWith()          ->      str.endsWith(value)</li>
+            <li>slice()             ->      str.slice(start, end)</li>
+            <li>substring()         ->      str.substring(start, end)</li>
+            <li>includes()          ->      str.includes(value)</li>
+            <li>indexOf()           ->      str.indexOf(value)</li>
+            <li>lastIndexOf()       ->      str.lastIndexOf(value)</li>
+            <li>split()             ->      str.split(separator)</li>
+            <li>repeat()            ->      str.repeat(count)</li>
+                    </pre>
+        </ol>
+    </div>
+    <div>
+        <h2>Escpae Characters</h2>
+        <ol>
+            <li>\n</li>
+            <li>\t</li>
+            <li>\\</li>
+            <li>\</li>
+        </ol>
+    </div>
+</body>
+</html>

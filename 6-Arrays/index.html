@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="arrays.js"></script>
+    <link rel="stylesheet" href="arr.css"/>
+</head>
+<body>
+    <h1>Arrays in JavaScript</h1>
+    <div id="one">
+    <h2>Arrays Key Points</h2>
+    <ul>
+        <li>Arrays are non primitive data types</li>
+        <li>Arrays are ordered collections of values.</li>
+        <li>That means they can store multiple values in a single variable of same data type or different data types but storing same data type is preferred for better performance and readability.</li>
+        <li>arrays are special type of Objects. with index as  their keys.that is when you return the type of array it returns type as object data type</li>
+        <li>Arrays are mutable, meaning their elements can be changed after the array is created.</li>
+        <li>Array index starts from zero</li>
+    </ul>
+    </div>
+    <div id="two">
+        <h2>Array Methods</h2>
+        <ol>
+        <pre style="line-height: 0.6 ;">
+            <li>length          ->          array.length(property)</li>
+            <li>push            ->          array.push(element) </li>
+            <li>pop             ->          array.pop() </li>
+            <li>unshift         ->          array.unshift(element) </li>
+            <li>shift           ->          array.shift() </li>
+            <li>concat          ->          array.concat(array2) </li>
+            <li>toString        ->          array.toString() </li>
+            <li>join            ->          array.join(separator) </li>
+            <li>slice           ->          array.slice(start, end) </li>
+            <li>splice          ->          array.splice(start, deleteCount, item1, item2, ...) </li>
+            <li>indexOf         ->          array.indexOf(element) </li>
+            <li>lastIndexOf     ->          array.lastIndexOf(element) </li>
+            <li>includes        ->          array.includes(element) </li>
+            <li>reverse         ->          array.reverse() </li>
+            <li>sort            ->          array.sort() </li>
+            <li>map             ->          array.map(callback)
+                <ul>
+                    <li>returns a new array used for storing transformed elements</li>
+                    <li>does not modify the original array and its size</li>
+                    <li>the main diff between foreach and map is foreach simply loops and does not return anything.</li>
+                    <li>even if result of foreach is  stored in a variable but map is used to store the transformed elements</li>
+                </ul>
+             </li>
+             <li>filter          ->          array.filter(callback)
+                <ul>
+                    <li>used to keep some ele based on condition in return stmt</li>
+                </ul>
+            </li>
+            <li>reduce()        ->          array.reduce((accumulator,currentValue, index,array)=>{return stmt;},initialvalue); </li>
+            <li>Array.from      ->          Array.from(iterable) </li>
+            
+        </pre>
+    </ol>
+    </div>
+</body>
+</html>

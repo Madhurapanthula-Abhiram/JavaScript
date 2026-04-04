@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+    <link rel="stylesheet" href="index.css"/>
+    <!-- <script src="index.js"></script>prints null as body is still not loaded so better write in body bottom -->
+</head>
+<body>
+    <h1>Window Object</h1>
+    <div id="one">
+        <h2>Key points</h2>
+        <ul>
+            <li>A window is a Object that is automatically created by the browser</li>
+            <li>It is a global Object and it is  browser provided js Object</li>
+            <li>It is the Super Object for all other browser objects</li>
+            <li>It contains DOM , BOM , properties and  methods etc </li>
+            <li>Also the alert, confirm, and prompt dialogs come under window object</li>
+        </ul>
+    </div>
+    <h1>Document Object Model(DOM)</h1>
+    <div class="two">
+        <h2>Key points</h2>
+        <ul>
+            <li>All the content of the html file can be accessed in javascript.</li>
+            <li>as the total content of html is stored as an object named document </li>
+            <li>The document object is created by the browser when the HTML is loaded</li>
+            <li>so document is browser provided javascript object</li>
+            <li>And this Object is under the window Object</li>
+            <li>In simple words DOM is a representation of your HTML page as objects</li>
+            <li>console.log(document); gives you html and using dir gives js properties and all</li>
+            <li>document.body gives html as it is an Object (contains sub tags in it)</li>
+            <li>document.body can give null if script is written before the body</li>
+            <li>document.title gives string as it is not an Object or as it contains no tags in it, it is simple text.</li>
+            <li>we use DOM as it allows dynamic manipulation of the HTML content.</li>
+        </ul>
+    </div>
+    <h1>Browser Object Model(BOM)</h1>
+    <div class="two">
+        <ul>
+            <li>BOM provides methods and properties to interact with the browser window.</li>
+            <li>BOM controls browser-related objects (not HTML).</li>
+            <li>Examples of BOM objects include location ,history,navigator,dialog methods-alert,confirm,prompt etc</li>
+            <li>other concepts discussed further.</li>
+        </ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title  id="t1">DOM tree</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body id="by" class="bclass">
+    <h1>Walking through DOM Tree</h1>
+    <div id="one">
+        <h2>Key points</h2>
+        <ul>
+            <li>We can access and manipulate HTML using JavaScript through the DOM (Document Object Model).</li>
+            <li>The browser represents the HTML document as a document object.</li>
+            <li>This document object acts as the root of the DOM tree. but as Object</li>
+            <li>The browser converts HTML code into a DOM tree structure, which makes it easier to understand and modify content dynamically.</li>
+            <li>In the DOM tree, HTML elements are organized in a hierarchical structure from the root node to leaf nodes.</li>
+        </ul>
+    </div>
+    <h1>Nodes and types of Nodes in DOM tree</h1>
+    <div class="two">
+        <h2 style="text-decoration: underline;">What is a node?</h2>
+        <p style="font-size: 22px;">any single element in dom tree is a node</p>
+        <h2 style="text-decoration: underline;">Types Of Nodes:</h2>
+        <p>We have 5 types of nodes mainly</p>
+        <ol>
+            <pre style="line-height: 0.6;">
+<li>document Node       ->       The root of everything it represents the whole page</li>
+<li>element Node        ->       all the html tags are element nodes the html,head,body,title, petc</li>
+<li>attribute Node      ->       These belong to elements like src="indes.js",href="index.css",lang="en",id="one",class="two"etc</li>
+<li>text Node           ->       All the text comes under this in title paragraph heading the text in it </li>
+<li>comment Node        ->       comments in html come under this node </li>
+<li>To check the type of node ".nodeType" is used which returns types as 1,2,3,8,9.</li>
+            </pre>
+        </ol>
+        <h3 style="text-decoration: underline;">what is Autocorrection?</h3>
+        <p>It is a browser work when we accidently do not close a tag or any erroneous html code is encountered by browser it fixes it. </p>
+        <h2 style="text-decoration: underline;">Parent , Children , Sibling nodes</h2>
+        <ul>
+           <pre style="line-height: 0.6;"> 
+<li>Parent Node        ->         The element that contains other elements inside it</li>
+<li>Child Node         ->         The elements that are inside a parent element</li>
+<li>Sibling Nodes      ->         Elements that share the same parent</li>
+</pre>
+</ul>
+    </div>
+    <h1>Dom Navigation Properties/methods OF Parent,child Sibling</h1>
+    <div class="three two">
+      <h2 style="text-decoration: underline;">Child Naviagtion Properties</h2>
+      <pre style="line-height: 0.6;"> 
+<li>.childNodes               ->    all child nodes (elements,text,comments also) text and comments not ignored</li>
+<li>.hasChildNodes()          ->    returns true if any child node exists</li>
+<li>.children                 ->    only element children (ignores text/comments)</li>
+<li>.children[0],[1]          ->    access specific child element by index</li>
+<li>.firstChild               ->    first node (can be text like whitespace,element,comment)text ,comment not ignored</li>
+<li>.lastChild                ->    last node (can be text/comment)text ,comment not ignored</li>
+<li>.firstElementChild        ->    first actual element (ignores text)</li>
+<li>.lastElementChild         ->    last actual element (ignores text)</li>
+</pre>
+</ul>
+<h2 style="text-decoration: underline;">Parent Navigation Properties</h2>
+<pre style="line-height: 0.6;"> 
+<li>.parentNode              ->      returns parent node (can be element, document, or documentFragment) returns any parent</li>
+<li>.parentElement           ->      returns parent only if it is an element, else null</li>
+<li> Difference              ->      parentNode can return non-elements, parentElement returns only elements</li>
+</pre>
+<h2 style="text-decoration: underline;">Sibling Navigation properties</h2>
+<pre style="line-height: 0.6;"> 
+<li>.nextSibling              ->      next node right in DOM tree(can be text/comment/element)</li>
+<li>.previousSibling          ->      previous node left in DOM tree(can be text/comment/element)</li>
+<li>.nextElementSibling       ->      next sibling that is an element only</li>
+<li>.previousElementSibling   ->      previous sibling that is an element only</li>
+<li> Difference               ->      sibling = all nodes, elementSibling = only HTML elements</li>
+</pre>
+    </div>
+    <h1>Table   Navigation Properties</h1>
+    <div class="two">
+      <pre style="line-height: 0.6;"> 
+<li>.rows                    ->       HTMLCollection of all rows in table</li>
+<li>.rows[0]                 ->       first row of the table</li>
+<li>.caption                 ->       returns <caption> element of table</li>
+<li>.tHead                   ->       returns <thead> element</li>
+<li>.tBodies                 ->       HTMLCollection of all <tbody> elements</li>
+<li>.tBodies[0]              ->       first <tbody> (commonly used)</li>
+<li>.tBodies[i]              ->       used when multiple <tbody> exist</li>
+<li>.tFoot                   ->       returns <tfoot> element</li>
+<li>.cells                   ->       collection of all cells (<td>/<th>) in a row</li>
+<li>.rowIndex                ->       index of row in entire table</li>
+<li>.sectionRowIndex         ->       index of row inside its section (<thead>/<tbody>/<tfoot>)</li>
+<li>.cellIndex               ->       index of cell inside a row</li>
+</pre>
+    </div>
+  <h1>Searching in DOM or DOM manipulation</h1>
+  <div class="two">
+    <pre style="line-height: 0.6;"> 
+<li>.getElementById()               ->         returns element with given id (only one)</li>
+<li>.getElementsByClassName()       ->         HTMLCollection of elements with given class</li>
+<li>.getElementsByTagName()
+<ul>               
+<li>HTMLCollection of elements with given tag</li>
+<li>works for all tags (div, p, etc.)</li>
+<li>no id/class required</li>
+</ul>
+<li>.querySelector()                
+<ul>
+<li>returns first matching element</li>
+<li>supports id selector (#id)</li>
+<li>supports class selector (.class)</li>
+<li>supports tag selector (div, p)</li>
+<li>supports descendant selection (div p)</li>
+<li>supports multiple selectors (h1, p)</li>
+<li>supports attribute selection ([type="text"])</li>
+<li>returns null if no match found</li></ul>
+<li>.querySelectorAll()   
+<ul>              
+<li>NodeList of all matching elements</li>            
+<li>returns all matches (not just first)</li>
+</ul>
+<li>Note                            ->         querySelector & querySelectorAll are most used</li>
+</pre>
+  </div>
+   <table>
+    <caption>This a Student table</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>City</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Abhi</td>
+      <td>21</td>
+      <td>Hyderabad</td>
+    </tr>
+    <tr>
+      <td>Ram</td>
+      <td>22</td>
+      <td>Vizag</td>
+    </tr>
+    <tr>
+      <td>Sai</td>
+      <td>20</td>
+      <td>Vijayawada</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+    <td colspan="3">complete table</td>
+    </tr></tfoot>
+</table>
+    <script src="index.js"></script>
+</body>
+</html>

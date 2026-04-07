@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="id1 id2">matches,closest,contains</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <h1>DOM Methods: matches, closest, contains</h1>
+
+<div class="one two">
+    <h2>matches() Key points:</h2>
+    <ul>
+        <li>Checks if an element matches a given CSS selector.</li>
+        <li>Returns true or false.</li>
+        <li>Works only on the element itself.</li>
+        <li>Useful in event handling to identify clicked elements.</li>
+        <li>Example: element.matches(".className")</li>
+    </ul>
+</div>
+
+<div class="two">
+    <h2>closest() Key points:</h2>
+    <ul>
+        <li>Finds the nearest ancestor (or itself) matching a selector.</li>
+        <li>Moves upward in the DOM tree.</li>
+        <li>Returns the matched element or null.</li>
+        <li>Very useful for event delegation.</li>
+        <li>Example: element.closest(".parentClass")</li>
+    </ul>
+</div>
+
+<div class="two">
+    <h2>contains() Key points:</h2>
+    <ul>
+        <li>Checks if one element contains another element.</li>
+        <li>Returns true or false.</li>
+        <li>Works downward in the DOM tree.</li>
+        <li>Used to detect clicks inside/outside elements.</li>
+        <li>Example: parent.contains(child)</li>
+    </ul>
+</div>
+<div id="id2"></div>
+<div id="id3"></div>
+<script src="index.js"></script>
+</body>
+</html>

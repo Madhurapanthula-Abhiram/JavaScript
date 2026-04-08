@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Properties</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+
+<h1>DOM Properties:<br><br>TagName, nodeName, nodeValue, innerHTML, outerHTML, textContent, hidden</h1>
+
+<div class="one two">
+    <h2>.getElementsByTagName()->Recap</h2>
+    <ul>
+        <li><b>Definition:</b> Selects elements by tag name</li>
+        <li>Returns HTMLCollection (array-like)</li>
+        <li>Access elements using index [0], [1]</li>
+        <li>Not a real array (no map/forEach directly)</li>
+        <li>Live collection (updates automatically)</li>
+        <li><b>Example:</b> document.getElementsByTagName("p")</li>
+    </ul>
+</div>
+
+<div class="two">
+    <h2>nodeName</h2>
+    <ul>
+        <li><b>Definition:</b> Returns name of the node</li>
+        <li>Element → TAG NAME (uppercase)</li>
+        <li>Text node → #text</li>
+        <li>Comment node → #comment</li>
+        <li><b>Example:</b> element.nodeName</li>
+    </ul>
+</div>
+
+<div class="two">
+    <h2>nodeValue</h2>
+    <ul>
+        <li><b>Definition:</b> Returns value of node</li>
+        <li>Element node → null</li>
+        <li>It gives the value in it as ele do not store value directly it is null</li>
+        <li>for every ele node you get null access it's child and print nodevalue then you get text or comment</li>
+        <li>Text node → actual text</li>
+        <li>Comment node → comment text</li>
+        <li>Attribute node → attribute value</li>
+        <li><b>Example:</b> element.firstChild.nodeValue</li>
+    </ul>
+</div>
+
+<div class="two">
+    <h2>innerHTML</h2>
+    <ul>
+        <li><b>Definition:</b> Gets/sets HTML inside element</li>
+        <li>Includes tags and content</li>
+        <li>Replaces all inner content when set</li>
+        <li>Can insert multiple elements</li>
+        <li>we can write nesting insertion but it inserts as siblings</li>
+        <li><b>Example:</b> element.innerHTML = "&lt;p&gt;Hello&lt;/p&gt;"</li>
+    </ul>
+</div>
+
+<div class="two">
+    <h2>outerHTML</h2>
+    <ul>
+        <li><b>Definition:</b> Gets/sets whole element</li>
+        <li>Includes element itself + content</li>
+        <li>Replaces entire element</li>
+        <li>Old variable becomes invalid after replace</li>
+        <li>but if stored you can acees it</li>
+        <li>Nesting works only if HTML is valid</li>
+        <li><b>Example:</b> element.outerHTML = "&lt;div&gt;New&lt;/div&gt;"</li>
+    </ul>
+</div>
+
+<div class="two">
+    <h2>textContent</h2>
+    <ul>
+        <li><b>Definition:</b> Returns only text</li>
+        <li>Ignores HTML tags</li>
+        <li>Includes hidden text</li>
+        <li>Safer and faster than innerHTML</li>
+        <li><b>Example:</b> element.textContent = "Hello"</li>
+    </ul>
+</div>
+
+<div class="two">
+    <h2>hidden attribute</h2>
+    <ul>
+        <li><b>Definition:</b> Hides or shows element</li>
+        <li>Works like display: none</li>
+        <li>Boolean (true / false)</li>
+        <li>Can be set via HTML or JS</li>
+        <li><b>Example:</b> element.hidden = true</li>
+    </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Attribute Methods</title>
+    <style>
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            color: cyan;
+            background-color: black;
+        }
+
+        .primary {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+        }
+
+        .two {
+            width: 500px;
+            height: 40%;
+            border: 2px solid cyan;
+            margin: 15px 15px 15px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            background-color: aqua;
+            color: black;
+            border: 1px solid aqua;
+            border-radius: 2px;
+        }
+
+        button:hover {
+            background-color: black;
+            color: aqua;
+        }
+
+        button:active {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="primary">
+        <div class="one two">
+            <img id="img1" src="f25.jpg">
+        </div>
+        <div class="two">
+            <img id="img2" src="f25.jpg" alt="car">
+        </div>
+    </div>
+    <div class="three">
+        <a id="link" href="https://google.com">Go</a>
+    </div>
+    <p id="first"></p>
+    <button id="btn" disabled>Click</button>
+    <div class="user" data-name="Abhi" data-age="22">
+        <p>This is data-*</p>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

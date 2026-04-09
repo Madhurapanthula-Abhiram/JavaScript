@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes Methods</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <h1>Attribute Methods</h1>
+
+    <div class="one two">
+        <h2>element.hasAttribute():</h2>
+        <ul>
+            <li>Checks whether an attribute exists or not</li>
+            <li>Returns true → if attribute is present</li>
+            <li>Returns false → if attribute is not present</li>
+            <li>Useful before accessing attribute (avoids null errors)</li>
+            <li><b>Example : </b>console.log(t1.hasAttribute("src"));</li>
+        </ul>
+    </div>
+    <div class="two">
+        <h2>element.getAttribute()</h2>
+        <ul>
+            <li>Returns the value of the given attribute</li>
+            <li>Always returns value as string</li>
+            <li>Returns null → if attribute does not exist</li>
+            <li>Gives exact value written in HTML (not modified)</li>
+            <li>Difference → element.href gives full URL but getAttribute("href") gives original</li>
+            <li><b>Example : </b>console.log(t1.getAttribute("src"));</li>
+        </ul>
+    </div>
+    <div class="two">
+        <h2>element.setAttribute()</h2>
+        <ul>
+            <li>Adds a new attribute or updates existing attribute</li>
+            <li>If attribute exists → value is updated</li>
+            <li>If attribute not exist → new attribute is added</li>
+            <li>Overwrites previous value completely</li>
+            <li>Can dynamically change id, class, src, href etc</li>
+            <li><b>Example : </b>t1.setAttribute("src", "image.jpg");</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>element.removeAttribute()</h2>
+        <ul>
+            <li>Removes the specified attribute from element</li>
+            <li>After removing → attribute will not exist</li>
+            <li>Useful for removing disabled, hidden, required etc</li>
+            <li><b>Example : </b>t1.removeAttribute("disabled");</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>element.attributes</h2>
+        <ul>
+            <li>Returns all attributes of an element</li>
+            <li>Returns a collection (NamedNodeMap)</li>
+            <li>Not an array but can be looped using for...of</li>
+            <li>Each attribute has name and value</li>
+            <li>Useful for debugging and inspecting elements</li>
+            <li><b>Example : </b>console.log(t1.attributes);</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>data-* attributes</h2>
+        <ul>
+            <li>Used to store custom data inside HTML elements</li>
+            <li>Must start with data-</li>
+            <li>Access using dataset property in JS</li>
+            <li>data-name → dataset.name</li>
+            <li>data-user-id → dataset.userId</li>
+            <li>Can set values dynamically using dataset</li>
+            <li>Can delete using delete keyword</li>
+            <li>Widely used in real-world projects</li>
+            <li><b>Example : </b>console.log(t1.dataset.name);</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Insertion Methods</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <h1>HTML Insertion Methods in JavaScript</h1>
+
+    <div class="one two">
+        <h2>document.createElement()</h2>
+        <ul>
+            <li>Used to create a new HTML element</li>
+            <li>Element is created in memory (not visible initially)</li>
+            <li>Must be inserted into DOM using append/prepend/before methods etc</li>
+            <li>Very important for dynamic content creation</li>
+            <li><b>Example : </b>let div = document.createElement("div");</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>element.className</h2>
+        <ul>
+            <li>Used to assign class to an element</li>
+            <li>Replaces existing class completely</li>
+            <li>That is if old class are there class="one two" and we set a class name to it as "three" the one and two
+                are removed.</li>
+            <li>Accepts string of class names</li>
+            <li>Used for styling and DOM manipulation</li>
+            <li><b>Example : </b>div.className = "box";</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>element.innerHTML</h2>
+        <ul>
+            <li>Used to insert HTML content inside element</li>
+            <li>Parses HTML tags</li>
+            <li>Replaces existing content</li>
+            <li>Can insert multiple elements at once</li>
+            <li><b>Example : </b>div.innerHTML = "&lt;h1&gt;Hello&lt;/h1&gt;";</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>element.innerText</h2>
+        <ul>
+            <li>Used to insert plain text and get the plaintext</li>
+            <li>Does not parse HTML tags</li>
+            <li>Displays exactly what is written</li>
+            <li>Safer than innerHTML and it does not display the hidden content</li>
+            <li><b>Example : </b>div.innerText = "&lt;h1&gt;Hello&lt;/h1&gt;";</li>
+            <li>it is shown as "&lt;h1&gt;Hello&lt;/h1&gt;"; only as text</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>element.appendChild()</h2>
+        <ul>
+            <li>Used to add a node at the end of a parent element</li>
+            <li>Inserts element inside the parent (as last child)</li>
+            <li>Accepts only ONE node as argument</li>
+            <li>Does NOT accept text directly</li>
+            <li>Throws error if multiple arguments are given</li>
+            <li><b>Example : </b>parent.appendChild(child);</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>element.append()</h2>
+        <ul>
+            <li>Adds element at the end of parent</li>
+            <li>Inserted inside the element</li>
+            <li>Can add multiple elements or text</li>
+            <li>Does not replace existing content</li>
+            <li><b>Example : </b>parent.append(child);</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>element.prepend()</h2>
+        <ul>
+            <li>Adds element at the beginning of parent</li>
+            <li>Inserted inside the element</li>
+            <li>Opposite of append()</li>
+            <li>Does not remove existing content</li>
+            <li><b>Example : </b>parent.prepend(child);</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>element.before()</h2>
+        <ul>
+            <li>Inserts element before the target element</li>
+            <li>Placed outside the element</li>
+            <li>Does not affect inner content</li>
+            <li>Useful for positioning elements</li>
+            <li><b>Example : </b>element.before(newEl);</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>element.after()</h2>
+        <ul>
+            <li>Inserts element after the target element</li>
+            <li>Placed outside the element</li>
+            <li>Does not affect inner content</li>
+            <li>Commonly used for layout changes</li>
+            <li><b>Example : </b>element.after(newEl);</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>element.replaceWith()</h2>
+        <ul>
+            <li>Replaces the element completely</li>
+            <li>Old element is removed from DOM</li>
+            <li>New element takes its place</li>
+            <li>Useful for dynamic updates</li>
+            <li><b>Example : </b>element.replaceWith(newEl);</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>Key Differences</h2>
+        <ul>
+            <li>appendChild() → adds only one element</li>
+            <li>append() → adds at end inside element</li>
+            <li>prepend() → adds at beginning inside element</li>
+            <li>before() → adds before element (outside)</li>
+            <li>after() → adds after element (outside)</li>
+            <li>innerHTML → inserts HTML</li>
+            <li>innerText → inserts text</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

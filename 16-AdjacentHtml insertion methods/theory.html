@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjacent HTML & Remove Methods</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+    <h1>Adjacent HTML Insertion & Remove Methods</h1>
+
+    <div class="one two">
+        <h2>element.insertAdjacentHTML()</h2>
+        <ul>
+            <li>Used to insert HTML at specific positions</li>
+            <li>Does NOT replace existing content</li>
+            <li>Works with raw HTML string</li>
+            <li>Faster than innerHTML</li>
+            <li>No need to use createElement()</li>
+            <li><b>Example : </b>box.insertAdjacentHTML("beforeend", "&lt;p&gt;Hello&lt;/p&gt;");</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>beforebegin</h2>
+        <ul>
+            <li>Inserts HTML before the element</li>
+            <li>Placed outside the element (above)</li>
+            <li>Same position as before()</li>
+            <li><b>Example : </b>box.insertAdjacentHTML("beforebegin", "&lt;p&gt;Before&lt;/p&gt;");</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>afterbegin</h2>
+        <ul>
+            <li>Inserts HTML inside element at beginning</li>
+            <li>Placed as first child</li>
+            <li>Same position as prepend()</li>
+            <li><b>Example : </b>box.insertAdjacentHTML("afterbegin", "&lt;p&gt;Start&lt;/p&gt;");</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>beforeend</h2>
+        <ul>
+            <li>Inserts HTML inside element at end</li>
+            <li>Placed as last child</li>
+            <li>Same position as append()</li>
+            <li>Most commonly used position</li>
+            <li><b>Example : </b>box.insertAdjacentHTML("beforeend", "&lt;p&gt;End&lt;/p&gt;");</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>afterend</h2>
+        <ul>
+            <li>Inserts HTML after the element</li>
+            <li>Placed outside the element (below)</li>
+            <li>Same position as after()</li>
+            <li><b>Example : </b>box.insertAdjacentHTML("afterend", "&lt;p&gt;After&lt;/p&gt;");</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>element.remove()</h2>
+        <ul>
+            <li>Removes the element completely from DOM</li>
+            <li>Element is deleted, not just hidden</li>
+            <li>Simple and modern method</li>
+            <li><b>Example : </b>element.remove();</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>insertAdjacentHTML vs append/prepend/before/after</h2>
+        <ul>
+            <li>In append/prepend/before/after we need to create element before insertion.</li>
+            <li>insertAdjacentHTML → works with HTML string so no need to create element direct one step.</li>
+            <li>And also using adjacent methods you can insert bulk content at once.</li>
+            <li>But in append..etc methods you should create ele then use loops and insert then.</li>
+            <li>Use append/before/after when:
+                <ul>
+                    <li>You need JS control</li>
+                    <li>You already have elements</li>
+                    <li>You add event listeners and you need Security (user input) </li>
+                </ul>
+            <li>Use insertAdjacentHTML when:
+                <ul>
+                    <li> You have HTML string </li>
+                    <li> You want fast insertion</li>
+                    <li> You add bulk content</li>
+                </ul>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>Key Position Mapping:</h2>
+        <ul>
+            <li>beforebegin → same as before()</li>
+            <li>afterbegin → same as prepend()</li>
+            <li>beforeend → same as append()</li>
+            <li>afterend → same as after()</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

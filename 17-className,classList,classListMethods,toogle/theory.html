@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>className & classList Notes</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+
+<body>
+
+    <h1>JS DOM - className & classList Concepts</h1>
+
+    <div class="one two">
+        <h2>className</h2>
+        <ul>
+            <li>Used to set class names</li>
+            <li>Overwrites all existing classes</li>
+            <li>Example : t1.className = "grey align"</li>
+            <li>After change, old classes are removed</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>classList</h2>
+        <ul>
+            <li>Returns classes as DOMTokenList (array-like)</li>
+            <li>Used to manipulate classes individually</li>
+            <li>Example : console.log(t1.classList)</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>classList.add()</h2>
+        <ul>
+            <li>Adds one or more classes</li>
+            <li>Does not remove existing classes</li>
+            <li>Example : t1.classList.add("arran")</li>
+            <li>Multiple classes : add("arran","align","mod","red")</li>
+            <li>If multiple classes define same property → last CSS rule wins</li>
+            <li>JS order does NOT matter</li>
+            <li>CSS order decides final style</li>
+            <li>Example : "arran" overrides "red" if defined later</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>classList.remove()</h2>
+        <ul>
+            <li>Removes a specific class</li>
+            <li>Example : t3.classList.remove("grey")</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>classList.toggle()</h2>
+        <ul>
+            <li>Adds class if not present</li>
+            <li>Removes class if already present</li>
+            <li>Repeated toggling switches state</li>
+            <li>Example : t3.classList.toggle("arran")</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>classList.contains()</h2>
+        <ul>
+            <li>Checks if class exists</li>
+            <li>Returns true or false</li>
+            <li>Example : t3.classList.contains("red")</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <h2>classList.replace()</h2>
+        <ul>
+            <li>Replaces one class with another</li>
+            <li>Example : t3.classList.replace("red","black")</li>
+            <li>Works only if old class exists</li>
+        </ul>
+    </div>
+
+</body>
+</html>
